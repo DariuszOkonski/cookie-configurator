@@ -1,2 +1,2 @@
-#Cookie-Configurator
+# Cookie-Configurator
 ### Simple app created in express

@@ -7,3 +7,13 @@
 body {
     background-color: #f7f7f7;
 }
+
+.logo-img {
+    width: 200px;
+}
+
+.cookie-preview {
+    width: 601px;
+    height: 640px;
+    /*background: url("/assets/images/sprinkles.png"), url("/assets/images/empty-dark.png");*/
+}

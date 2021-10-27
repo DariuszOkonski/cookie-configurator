@@ -11,9 +11,6 @@ const app = express();
 app.use(express.json());
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(express.urlencoded({
-    extended: true
-}));
 app.engine('.hbs', hbs({
     extname: '.hbs',
 }));

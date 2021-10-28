@@ -1,11 +1,9 @@
-{{log 'cookie' cookie}}
-
 {{#with cookie}}
-<div class="cookie-preview"
-     style="background:
-             {{#each addons}}
-                url('/assets/images/{{this}}.png'),
-             {{/each}}
+    <div class="cookie-preview"
+         style="background:
+                 {{#each addons}}
+                    url('/assets/images/{{this}}.png'),
+                 {{/each}}
 
-             url('/assets/images/empty-{{base}}.png');"/>
+                 url('/assets/images/empty-{{base}}.png');"></div>
 {{/with}}

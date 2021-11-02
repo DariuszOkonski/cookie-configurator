@@ -3,15 +3,22 @@
 <h1>Configure your cookie</h1>
 
 <h2>Select cookie base:</h2>
+<ul>
 {{#each bases}}
-    <a href="/configurator/select-base/{{this.[0]}}">Select {{this.[0]}} for: {{this.[1]}} PLN</a>
+    <li>
+        <a href="/configurator/select-base/{{this.[0]}}">Select {{this.[0]}} for: {{this.[1]}} PLN</a>
+    </li>
 {{/each}}
+</ul>
 
 <h2>Select cookie addons:</h2>
+<ul>
 {{#each addons}}
-    <a href="/configurator/add-addon/{{this.[0]}}">Select {{this.[0]}} for: {{this.[1]}} PLN</a>
+    <li>
+        <a href="/configurator/add-addon/{{this.[0]}}">Select {{this.[0]}} for: {{this.[1]}} PLN</a>
+    </li>
 {{/each}}
-
+</ul>
 
 
 

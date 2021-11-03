@@ -8,7 +8,7 @@ homeRouter
         res.render('home/index', {
             cookie: {
                 base: 'light',
-                addons: ['coconut', 'honey'],
+                addons: ['coconut', 'cranberries', 'honey'],
             },
             bases: Object.entries(COOKIE_BASES),
             addons: Object.entries(COOKIE_ADDONS),

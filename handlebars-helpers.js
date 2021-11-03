@@ -1,6 +1,5 @@
 const handlebarsHelpers = {
-    'find-price': (entries, selectedItem) => {
-            console.log({entries, selectedItem})
+    findPrice: (entries, selectedItem) => {
             const found = entries.find(el => el[0] === selectedItem);
 
             if(!found){

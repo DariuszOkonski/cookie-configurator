@@ -2,13 +2,7 @@
 
 <h2>Select cookie base:</h2>
 
-<ul>
-{{#each bases}}
-    <li>
-        <a href="/configurator/select-base/{{this.[0]}}">Select {{this.[0]}} for: {{this.[1]}} PLN</a>
-    </li>
-{{/each}}
-</ul>
+{{> base-selector }}
 
 <h2>Select cookie addons:</h2>
 <ul>
@@ -19,6 +13,14 @@
 {{/each}}
 </ul>
 
-{{> cookie-preview }}
 
-{{> addons }}
+{{#if cookie.base}}
+    {{> cookie-preview }}
+    {{> addons }}
+{{else}}
+
+    <p><strong>Please select base of your cookie to se it's preview and price summary</strong></p>
+    {{> base-selector}}
+
+{{/if}}
+

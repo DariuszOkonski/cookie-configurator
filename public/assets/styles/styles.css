@@ -17,3 +17,10 @@ body {
     height: 640px;
     /*background: url("/assets/images/sprinkles.png"), url("/assets/images/empty-dark.png");*/
 }
+
+.error {
+    border: 1px solid red;
+    padding: 15px;
+    margin: 5px;
+    background-color: #e5b0b0;
+}

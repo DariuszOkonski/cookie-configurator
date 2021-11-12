@@ -12,7 +12,23 @@ configuratorRouter
                 baseName
             })
 
-    });
+    })
+
+    .get("/add-addon/:addonName", (req, res) => {
+        const { addonName } = req.params;
+        const { cookieAddons } = req.cookies;
+
+        const addons = cookieAddons ? JSON.parse(cookieAddons) : [];
+        addons.push(addonName);
+
+
+        res
+            .cookie('cookieAddons', JSON.stringify(addons))
+            .render('configurator/added', {
+                addonName
+            })
+
+    })
 
 module.exports = {
     configuratorRouter

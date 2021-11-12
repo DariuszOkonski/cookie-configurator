@@ -30,6 +30,20 @@ configuratorRouter
 
     })
 
+    .get("/delete-addon/:addonName", (req, res) => {
+        const { addonName } = req.params;
+
+        const addons = getAddonsFromReq(req)
+            .filter(addon => addon !== addonName);
+
+        res
+            .cookie('cookieAddons', JSON.stringify(addons))
+            .render('configurator/deleted', {
+                addonName
+            })
+
+    })
+
 module.exports = {
     configuratorRouter
 }

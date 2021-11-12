@@ -4,12 +4,14 @@
 
 {{> base-selector }}
 
-<h2>Select cookie addons:</h2>
+<h2>Select your favorite addons:</h2>
 <ul>
 {{#each addons}}
-    <li>
-        <a href="/configurator/add-addon/{{this.[0]}}">Select {{this.[0]}} for: {{this.[1]}} PLN</a>
-    </li>
+    {{#if (isNotInArray @root.cookie.addons this.[0])}}
+        <li>
+            <a href="/configurator/add-addon/{{this.[0]}}">Select {{this.[0]}} for: {{this.[1]}} PLN</a>
+        </li>
+    {{/if}}
 {{/each}}
 </ul>
 

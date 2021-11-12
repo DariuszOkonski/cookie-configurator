@@ -1,14 +1,15 @@
 const express = require('express');
 const {COOKIE_BASES, COOKIE_ADDONS} = require("../data/cookies-data");
-const {handlebarsHelpers} = require("../handlebars-helpers");
+const {handlebarsHelpers} = require("../utils/handlebars-helpers");
+const {getAddonsFromReq} = require("../utils/get-addons-from-req");
 
 const homeRouter = express.Router();
 
 homeRouter
     .get('/', (req, res) => {
-        let { cookieBase, cookieAddons } = req.cookies;
+        let { cookieBase } = req.cookies;
 
-        const addons = cookieAddons ? JSON.parse(cookieAddons) : [];
+        const addons = getAddonsFromReq(req);
 
         const sum =
             (cookieBase ? handlebarsHelpers.findPrice(Object.entries(COOKIE_BASES), cookieBase) : 0)
